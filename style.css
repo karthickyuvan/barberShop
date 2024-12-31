@@ -1,0 +1,531 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #009688),
+    url("./Barber_Shop_img/banner.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.nav-links {
+  width: 200px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background: #009688;
+  position: fixed;
+  transition: 1s;
+  
+}
+.nav-links ul li {
+  list-style: none;
+  margin: 50px 20px;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav img {
+  width: 140px;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+  cursor: pointer;
+  
+}
+.menu-btn {
+  width: 50px;
+  height: 50px;
+  background: #009688;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  
+}
+.menu-btn img {
+  width: 20px;
+  position: absolute;
+  top: 50%; /* Moves the image to the center */
+  left: 50%; /* Moves the image to the center */
+  transform: translate(-50%, -50%); /* Centers the image perfectly */
+}
+
+.content {
+  text-align: center;
+  color: #fff;
+  padding-top: 200px;
+}
+.content h1 {
+  font-size: 150px;
+  font-family: kaushan script, cursive;
+}
+.content p {
+  font-size: 30px;
+  font-family: poppins;
+  font-style: italic;
+}
+/* .btn {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+  border: 0.5px solid #fff;
+  font-family: poppins;
+  font-size: 20px;
+  cursor: pointer;
+}
+.content span {
+  margin: 15px;
+} */
+ 
+.content {
+
+    text-align: center;
+  
+}
+
+.content span {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden; /* Ensures the animation stays within the button bounds */
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border: 0.5px solid #fff;
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    z-index: 1; /* Ensures the text stays above the animation */
+    transition: color 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    
+    z-index: -1; /* Places the background below the text */
+    transition: width 0.3s ease;
+   
+}
+
+.btn:hover::before {
+    width: 100%; /* Fills the button from left to right */
+}
+
+.btn:hover {
+    color: black; /* Ensures text remains visible on hover */
+}
+
+.features
+{
+   
+    padding: 70px 0;
+    width: 100%;
+}
+ .title-text
+{
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text h1{
+  font-size: 50px;
+}
+
+.title-text p {
+  margin: auto;
+  font-size: 20px;
+  color: #009688;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.title-text p::after {
+  content: '';
+  width: 70px; /* Adjust the width for a leaf-like shape */
+  height: 40px; /* Adjust the height */
+  background: linear-gradient(#019587, #fff);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+  transform: rotate(10deg); /* Change the rotation to look more like a leaf */
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.features-box
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+.features-info
+{
+  flex-basis: 50%;
+ 
+}
+.features-img{
+  flex-basis: 50%;
+  margin: auto;
+}
+.features-img img{
+  width: 70%;
+  
+  border-radius: 10px;
+}
+.features-info h1
+{
+  text-align: left;
+  margin-bottom:10px ;
+  color: #009688  ;
+}
+.feature-desc
+{
+  display: flex;
+  align-items:center;
+  margin-bottom: 40px;
+}
+.feature-icon .fa-solid
+{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  line-height: 50px;
+  color: #009688;
+  border: 1px solid #009688;
+  border-radius: 8px;
+}
+.feature-text p
+{
+  padding: 0 20px;
+  text-align: initial ;
+}
+
+.services
+{
+  padding: 70px 0;
+  width: 100%;
+  background-color: #efefef;
+}
+.services-box
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  
+}
+.services-img
+{
+  flex-basis: 48%;
+ text-align: center;
+ border-radius: 7px;
+ margin-bottom: 20px;
+ color: #FFF;
+ position: relative;
+}
+.services-img img
+{
+  width: 100%;
+  border-radius: 7px;
+}
+.overlay
+{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+  background: linear-gradient(rgba(0,0,0,0.5),#009688);
+  transition: 1s;
+  opacity: 0;
+  position: absolute;
+  border-radius: 7px;
+
+}
+.services-img:hover .overlay
+{
+  opacity: 1;
+}
+.service-desc
+{
+  width: 80%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+hr{
+  height: 2px;
+  width: 60%;
+  margin: 15px auto;
+  border: 0;
+  background: #fff;
+}
+
+.service-desc p{
+  font-size: 14px;
+}
+
+.services-img:hover .service-desc
+{
+  opacity: 1;
+  bottom: 40%;
+}
+
+.testimonal
+{
+  padding: 70px 0;
+  width: 100%;
+
+}
+.testimonal-row
+{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.testimonal-col
+{
+  flex-basis: 30%;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #00968814;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.testimonal-col p
+{
+  padding-top: 10px;
+}
+.user
+{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px 0;
+}
+.user img
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.testimonal-col:hover
+{
+  transform: translateY(-10px);
+}
+
+
+.footer{
+  padding: 70px 0;
+  width: 100%;
+  background-color: #efefef;
+ position: relative;
+}
+
+.footer-img
+{
+  opacity: 0.1;
+  max-width: 370px;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+.footer-row{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-left, .footer-right{
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.footer-right{
+  text-align: right;
+}
+
+.footer-right p a{
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-right p a:hover{
+  color: #009688;
+}
+
+.footer-row h1{
+  margin: 20px 0;
+}
+
+.footer-row p{
+  line-height: 35px;
+}
+
+.footer-left .fas, .footer-right .fas{
+  font-size: 20px;
+  color: #009688;
+  margin: 10px;
+}
+
+.Social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Social-links ul{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.Social-links ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #009688;
+  background-color:  #fff;
+  border-radius: 3px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+
+.Social-links ul li a {
+  text-decoration: none;
+  color: #009688; /* Icon color */
+  font-size: 24px; /* Icon size */
+}
+.Social-links ul li:hover {
+  transform: translateY(-10px); /* Move up on hover */
+  background-color: #009688; /* Background color change on hover */
+  
+}
+.Social-links ul li:hover a {
+  color: #fff; /* Change icon color on hover */
+}
+
+.footer-bottom
+{
+  text-align: center;
+  padding-top: 20px;
+  color: #009688;
+}
+
+
+
+
+/* Media Query */
+
+
+
+
+@media screen and (max-width: 770px) {
+  .content h1 {
+    font-size: 60px;
+    font-family: kaushan script, cursive;
+  }
+  .content p {
+    font-size: 20px;
+    font-family: poppins;
+    font-style: italic;
+    padding-top: 20px;
+  }
+  .content span 
+  {
+    display: block;
+    margin-top: 20px auto;
+  }
+  .btn1{
+    padding: 10px 32px ;
+  }
+  .title-text h1{
+    font-size: 35px;
+    padding-top: 19px;
+  }
+  .features-info{
+    flex-basis: 100%;
+  }
+  .features-img{
+    flex-basis: 100%;
+    
+  }
+  .features-img img{
+    width: 100%;
+  }
+  .services-img{
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .service-desc p{
+    font-size: 12px;
+  }
+  hr
+  {
+    margin: 5px auto;
+  }
+  .services-img:hover .service-desc
+  {
+    bottom: 25% !important;
+  }
+
+.testimonal-col
+{
+  flex-basis: 100%;
+}
+/*  FOOTER */
+     
+.title-text-4 h1{
+  font-size: 35px;
+}
+
+.footer-left, .footer-right{
+  flex-basis: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-img{
+  top: 25%;
+}
+}
